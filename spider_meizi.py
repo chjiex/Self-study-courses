@@ -34,6 +34,6 @@ for i in img_urls:
 		img_href = soup_third.find("div", {"class": "main-image"}).find("img")["src"]
 		print(img_href)
 		img = requests.get(img_href, headers=headers)
-		with open(r"C:\Users\cheng\Desktop\img_miezi\%s\%s" %(title, str(times)), "wb") as f:
+		with open(r"C:\Users\cheng\Desktop\img_miezi\%s\%s.jpg" %(title, str(times)), "wb") as f:
 			f.write(img.content)
 		print("download %s successful!!" % str(times))
