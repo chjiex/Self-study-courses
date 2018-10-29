@@ -1,3 +1,4 @@
+# 此次是对天猫手机搜索第一页的处理，没有找出每页的规律，就没有对页面进行爬取了 慢慢加油吧！ 
 import pandas as pd
 import requests
 import re
@@ -16,10 +17,12 @@ get_lists = re.findall(reg, r.text)
 # print(get_list)
 # for i in get_lists:
 #     print(i)
+# 将列表进行数据框处理
 df = pd.DataFrame(get_lists)
 # print(df)
 df.columns = ['Prince', 'Href', 'ProductModel', 'TredMls', 'Data_item', 'ProductShop_name']
 
 # print(df)
+# 将数据进行CSV，Excel文件储存
 df.to_csv('phone.csv', encoding='gbk')
 df.to_excel("phone.xls", sheet_name='第一页')
