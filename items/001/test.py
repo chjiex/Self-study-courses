@@ -12,7 +12,7 @@ if img.mode != 'L':   # 判断图像是否为灰度图像，L为灰度模式
 w = img.size[0]
 h = img.size[1]
 # print(img.size)
-# img = img.resize((w//2, h//1.5)) # 图像大小随意设置的
+img = img.resize((w, h) # 图像大小可随意设置的
 f = open('./img2.txt', 'w+')
 for i in range(0,h,2): # 每隔一行取一行像素，是为了保持视觉上的纵横比
 	line = " "
