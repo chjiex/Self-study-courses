@@ -7,7 +7,7 @@ def deal_picture(path):
 		img = img.convert('L')
 	# w = img.size[0]
 	# h = img.size[1]
-	img = img.resize((int(960*0.2), int(1280*0.2)),Image.ANTIALIAS)
+	img = img.resize((int(img.size[0]*0.5), int(img.size[1]*0.5)),Image.ANTIALIAS)
 	w = img.size[0]
 	h = img.size[1]
 	f = open("./{}.txt" .format(path.split('.')[0]), "w+")
